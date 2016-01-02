@@ -1,0 +1,6 @@
+C:\Users\ProBook\Desktop\Csharp\programs\test.cs\test.cs\bin\Debug\test.cs.exe.config
+C:\Users\ProBook\Desktop\Csharp\programs\test.cs\test.cs\bin\Debug\test.cs.exe
+C:\Users\ProBook\Desktop\Csharp\programs\test.cs\test.cs\bin\Debug\test.cs.pdb
+C:\Users\ProBook\Desktop\Csharp\programs\test.cs\test.cs\obj\Debug\test.cs.csprojResolveAssemblyReference.cache
+C:\Users\ProBook\Desktop\Csharp\programs\test.cs\test.cs\obj\Debug\test.cs.exe
+C:\Users\ProBook\Desktop\Csharp\programs\test.cs\test.cs\obj\Debug\test.cs.pdb
