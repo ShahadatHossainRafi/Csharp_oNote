@@ -1,0 +1,14 @@
+Csharp Assemblies
+-----------------
+
+In VS you right-click the project, "Add Reference" and a dialogue for adding assembly references pops up
+[23:00] <Rafibd01717> so Python modules and Csharp assemblies are actually same thing
+[23:00] <z16> Once that is done, you can use the class by referencing the correct namespace
+[23:00] == asymetrixs [~asymetrix@f050049229.adsl.alicedsl.de] has quit [Ping timeout: 260 seconds]
+[23:00] <z16> var x = new AssemblyRoot.Namespace1.SomeClass()
+[23:00] == lillith_xue [~lillith@s15851954.onlinehome-server.info] has joined ##csharp
+[23:01] <Rafibd01717> hm. makes sense
+[23:01] <z16> If that is too much to type all the time, you can add this line somewhere before that (usually at the top of the file): using AssemblyRoot.Namespace1;
+[23:01] <z16> That will put all the names from that namespace into the current scope
+[23:01] <z16> And you can use them there
+[23:01] <Rafibd01717> okay

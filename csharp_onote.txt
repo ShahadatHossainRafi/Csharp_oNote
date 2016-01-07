@@ -40,10 +40,10 @@ Csharp Basic
 
 @- Which Languages are supported by .Net?
 
-   Many languages are supported including C#, Python, IronPython,
-IronRuby,Perl, C++, JavaScript, Cobol, LISP etc.
+   Many languages are supported including C#, IronPython,
+IronRuby, Perl, C++, JavaScript, Cobol, LISP etc.
 
-@- Can these language communicate with each other?
+@- Can these languages communicate with each other?
 
    Yes all these languages can communicate with each other.
 
@@ -54,6 +54,77 @@ IronRuby,Perl, C++, JavaScript, Cobol, LISP etc.
 @- Mono project URL?
 
    http://www.mono-project.com/download/
+
+@- "using" keyword is used to...
+
+   Include namespaces within our program.
+
+@- All C# programs start execution from which method?
+
+   Main method.
+
+@- C# single and multiline comment syntax is...
+
+   Single line comment syntax - // This is single line comment syntax.
+   Multi line comment syntax - /* This is multi line comment syntax. */
+
+@- Is C# case sensitive?
+
+   Yes.
+
+@- Statements and expressions should end with... 
+
+   Semicolon (;)
+
+@- Class variables are called...
+
+   Member variables.
+   Fields.
+   Data members.
+
+@- Class functions are called...
+
+   Member functions.
+   Methods.
+
+@- To clear console screen...
+
+   We can use Console.Clear() method inside of Main function.
+
+@- How can we write multiple lines in Console.Write() method if the line is
+too bit to fit within the screen?
+
+   We can concatenate. Console.WriteLine("first line" +
+                                         "second line" +
+                                         "third line");
+
+@- How can we print single and double quotations around a line. 
+
+   We can print double quotation with the help of escape sequence \. And we
+can print single and tripple quotation as normal string. 
+
+   Example:
+
+using System;
+
+namespace quotation_inside_quotation.cs
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			Console.Clear();
+			
+			Console.WriteLine("A normal line without double quotation.");
+			Console.WriteLine("\"A line with double quotations.\"");
+			Console.WriteLine("'A line with single quotations.'");
+			Console.WriteLine("'''A line with triple quotations.'''");
+
+			Console.Write("\n\nPress any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
 
 
 
@@ -66,7 +137,7 @@ Compilation
 
 @- To run C# files using mono project...
 
-   Just type the file name in command prompt and press enter.
+   Just type the file_name.exe in command prompt and press enter.
 
 @- To open a new project in Sharpdevelop...   
 
@@ -78,6 +149,380 @@ Compilation
 
 
 
+Identifier
+----------
+
+@- What is an Identifier?
+
+   An identifier is a name used to identify variables, functions, classes or
+any other used defined item. 
+
+@- List the rules of defining identifiers...
+
+   - First character of an identifier should always be a character.
+   - Leading character of an identifier can't be a digit.
+   - Identifiers can consist of letters, digits (0 - 9) and underscore (_).
+   - Identifiers should not be a C# keyword.
+   - C# keywords can be used as identifiers but to do that we need to use @
+     before the identifier. For example @foreach.
+   - Identifiers can't contain any special characters like . ? / > $ @ & etc.
+   - Identifiers can't carry spaces.
+
+@- C# reserved keywords are...
+
+   abstract
+   as
+   base
+   bool
+   break
+   byte
+   case
+   catch
+   char
+   checked
+   class
+   const
+   continue
+   decimal
+   default
+   delegate
+   do
+   double
+   else
+   enum
+   event
+   explicit
+   extern
+   false
+   finally
+   fixed
+   float
+   for
+   foreach
+   goto
+   if
+   implicit
+   in
+   in (generic modifier)
+   int
+   interface
+   internal
+   is
+   lock
+   long
+   namespace
+   new
+   null
+   object
+   operator
+   out
+   out (generic modifier)
+   override
+   params
+   private
+   protected
+   public
+   readonly
+   ref
+   return
+   sbyte
+   sealed
+   short
+   sizeof
+   stackalloc
+   static
+   string
+   struct
+   switch
+   this
+   throw
+   true
+   try
+   typeof
+   uint
+   ulong
+   unchecked
+   unsafe
+   ushort
+   using
+   virtual
+   void
+   volatile
+   while 	
+
+@- C# special keywords are...
+
+   add
+   alias
+   ascending
+   descending
+   dynamic
+   from
+   get
+   global
+   group
+   into
+   join
+   let
+   orderby
+   partial (type)
+   partial (method)
+   remove
+   select
+   set
+
+@- Example of using reserved keywords as variables...
+
+using System;
+
+namespace Using_Builtin_Keywords_As_Variable
+{
+	class Root
+	{
+		public static void Main(string[] args)
+		{
+                        Console.Clear();
+
+			String @foreach = "Some text";
+			int @int = 7;
+			double @public = 5.0;
+			
+			Console.WriteLine(" foreach is used as variable: {0}" +
+			                  "\n int is used as variable: {1}" +
+			                  "\n public is used as variable: {2}", @foreach, @int, @public);
+			
+			Console.Write("\n\n Press any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
+
+@- We need to use @ sign before variable both times when...
+
+   We are declaring variables and printing variables.
+
+
+
+Variables
+---------
+
+@- Variable declaration syntax...
+
+   data_type var;
+
+   Example:
+
+   int x;
+   double y, z;
+   char c, ch;
+
+@- To initialize variables...
+
+   variable_name = value;
+
+@- Variables can be initialized when declaration?
+
+   Yes variables can be initialized during declaration.
+
+   Example:
+ 
+   int x = 10, z = 5;
+   double y = 4.00;
+
+Data Types
+----------
+
+@- How many kinds of data types available in Csharp?
+
+   - Value type
+   - Refernce type
+   - Dynamic type
+   - String type
+   - Pointer type
+   - Object type
+
+@- 
+
+
+Data Types
+----------
+
+@- What is the difference between SByte and sbyte?
+
+   There is no difference. In fact sbyte is an alias of System.SByte.
+
+@- sbyte or SByte which one should be used?
+
+   Documentation recemmends sbyte instead of SByte.
+
+
+Type Casting
+------------
+
+@- What is type casting?
+
+   Type casting is converting one type of dato into another type of data.
+
+@- How many kinds of type casting available in C#?
+
+   2 kinds of type casting supported by C#.
+
+   - Explicit type casting
+   - Implicit type casting
+
+@- What is Explicit type casting?
+
+   Explicit type casting is done by programmers using predefined functions.
+
+@- What is Implicit type casting?
+
+   Implicit type casting are performed by C# in type safe manner. For example
+from smaller to larger integral types. Conversions from derived classes to base
+classes. 
+
+@- Implicit type casting rules...
+
+   - Implicit type casting is done without help of any type casting operator
+     or function.
+   - Implicit type casting is done to convert from smaller to larger data
+     types.
+   - Implicit type casting usually prevents from loosing data while casting
+     type.
+
+@- Implicit type casting syntax...
+
+   data_type var1 = var2;
+
+   Example:
+
+using System;
+
+namespace type_casting_syntax_3.cs
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			Console.Clear();
+			sbyte x = 22;
+			Console.WriteLine("SByte \"x\" is {0}", x);
+			int y = x;
+			Console.WriteLine("\nAfter implicit type casting now int \"y\" is {0}", y);
+			
+			Console.Write("\n\nPress any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
+
+@- Type casting syntax 1...
+
+   data_type var = (data_type)var1;
+
+   Example...
+
+using System;
+
+namespace Type_Casting_Syntax_1.cs
+{
+	class Root
+	{
+		public static void Main(string[] args)
+		{
+			Console.Clear();
+			
+			double x = 5.44;
+			Console.WriteLine("Type of the variable x is double: {0}", x);
+			Console.WriteLine("Type of the variable x is now int: {0}", (int)x);
+
+			Console.Write("\n\nPress any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
+
+@- Type casting syntax 2...
+
+   data_type var = var1.ToType();
+
+using System;
+
+namespace Type_Casting_Syntax_1.cs
+{
+	class Root
+	{
+		public static void Main(string[] args)
+			{
+			Console.Clear();
+			
+			int x = 5;
+			Console.WriteLine("Type of the variable x(5) is now string: {0}", x.ToString());
+			
+			double y = 5.00;
+			Console.WriteLine("Type of the variable y(5.00) is now string: {0}", y.ToString());
+			
+			bool z = true;
+			Console.WriteLine("Type of the variable z(true) is now string: {0}", z.ToString());
+
+			Console.Write("\n\nPress any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
+
+@- Type casting syntax 3...
+
+   data_type var = Convert.ToType(var_to_cast_type);
+
+   Example:
+
+using System;
+
+namespace type_casting_syntax_3.cs
+{
+	class Program
+	{
+		public static void Main(string[] args)
+		{
+			double x = 5.32;
+			Console.WriteLine("Now x = {0}. Hence data type of \"x\" is double.", x);
+			Console.WriteLine("\nChanging the data type from double to int...");
+			Console.WriteLine("\n\"x\" is now int. So the value is now {0}", Convert.ToInt32(x));
+			
+			Console.Write("\n\nPress any key to continue . . . ");
+			Console.ReadKey(true);
+		}
+	}
+}
+
+@- Type casting methods...
+
+   ToBoolean() - Converts a type to a boolean type where possible.
+   ToByte() - Converts a type to byte type where possible.
+   ToSbyte() - Converts a type to a signed byte type.
+   ToChar() - Converts a type to unicode single character where possible.
+   ToDateTime() - Converts a type to date-time structure.
+   ToDecimal() - Converts a float or integer type to a decimal type.
+   ToDouble() - Converts a type to a double type.
+   ToInt16() - Converts a type to an 16 bit integer type.
+   ToInt32() - Converts a type to a 32 bit integer type.
+   ToInt64() - Converts a type to a 64 bit integer type.
+   ToUInt16() - Converts a type to an unsigned integer type.
+   ToUInt32() - Converts a type to an unsigned long type.
+   ToUInt64() - Converts a type to an unsigned big integer type.
+   ToString() - Converts a type to a string type.
+   ToSingle() - Converts a type to a small floating point number type.
+
 
 
 Next Read : http://www.tutorialspoint.com/csharp/csharp_program_structure.htm
+
+Stack and Heap type memory location -  http://stackoverflow.com/questions/79923/what-and-where-are-the-stack-and-heap
+
+Difference between value and reference type -  http://www.albahari.com/valuevsreftypes.aspx
+
+
+ToDo
+----
+
+@- Data type and variables.
